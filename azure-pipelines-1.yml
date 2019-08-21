@@ -1,4 +1,17 @@
 # Maven
+- task: Veracode@2
+  inputs:
+    ConnectionDetailsSelection: 'Credentials'
+    username: 'dfdb07a46cff341e66accd5574076bf9'
+    password: 'd4fa0c897a4c9b15d22f7797697fbfa9aeff83c977b8d6fda39c7f4c9d31a4569fa2fbe69fdce97a7cb1bf54f3086abf60d3fc8c34d023884b8d6ef4d0dd6b72'
+    veracodeAppProfile: '$(system.teamProject)'
+    version: '$(build.buildNumber)'
+    filepath: '$(build.artifactstagingdirectory)'
+    createSandBox: false
+    createProfile: false
+    scanStatusCheckInterval: '60'
+    importResults: false
+    failBuildOnPolicyFail: false
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
